@@ -1,0 +1,294 @@
+header
+	position: fixed
+	z-index: 100
+	top: 0
+	left: 0
+	width: 100%
+	padding-bottom: 50px
+	background: white
+	.top-header
+		padding-top: 10px
+		align-items: center
+	.bottom-header
+		margin-top: 10px
+		background: #b96e2b
+		align-items: center
+		margin-bottom: -50px
+		@media (max-width: 1365.98px)
+			font-size: 14px
+		@media (max-width: 1024.98px)
+			font-size: 16px
+	.header-banner
+		flex-basis: 0
+		flex-grow: 1
+		max-width: 100%
+		margin-left: 20px
+		text-align: right
+		a
+			display: flex
+			align-items: center
+			height: 80px
+			justify-content: flex-end
+			img
+				height: 100%
+				max-height: 100%
+		@media (max-width: 1199.98px)
+			a
+				height: 70px
+		@media (max-width: 1024.98px)
+			a
+				height: 60px
+		@media (max-width: 575.98px)
+			a
+				img
+					height: unset
+
+	.logo
+		flex: 0 0 auto
+		max-width: none
+		margin-right: auto
+		a
+			height: 80px
+			display: flex
+			align-items: center
+			img
+				height: 100%
+		@media (max-width: 1199.98px)
+			a
+				height: 70px
+		@media (max-width: 1024.98px)
+			a
+				height: 60px
+	.main-nav
+		padding-left: 16px
+		margin-right: auto
+		transition: all .3s cubic-bezier(.2,.5,.5,.8)
+		ul
+			display: flex
+			align-items: center
+			height: 50px
+			li
+				position: relative
+				padding-right: 10px
+				margin-right: 10px
+				a
+					color: white
+					text-transform: uppercase
+				@media (min-width: 1200px)
+					&:not(:last-child):after
+						position: absolute
+						top: 50%
+						transform: translateY(-50%)
+						content: ''
+						height: 12px
+						width: 1px
+						background: rgba(white,.2)
+						right: 0
+					&.active,&:hover
+						&:before
+							position: absolute
+							bottom: -15px
+							transform: translateY(-50%)
+							content: ''
+							height: 5px
+							background: #ccb16a
+							right: 10px
+							left: 0
+		.mobile-off
+			display: none
+		@media (max-width: 1199.98px)
+			position: fixed
+			top: 0
+			right: 0
+			bottom: 0
+			z-index: 3
+			padding-left: 0
+			background: #b96e2b
+			width: 250px
+			padding: 20px
+			transform: translateX(100%)
+			transition: all .3s cubic-bezier(.2,.5,.5,.8)
+			&.open
+				transform: translateX(0)
+				.mobile-off
+					display: block
+					position: absolute
+					right: 100%
+					width: 50px
+					height: 50px
+					background: #b96e2b
+					top: 10px
+					color: white
+					font-size: 24px
+					display: flex
+					justify-content: center
+					align-items: center
+			ul
+				height: 100%
+				display: block
+				overflow-y: auto
+				li
+					flex: 0 0 100%
+					max-width: 100%
+					padding-right: 0
+					margin-right: 0
+					margin-bottom: 10px
+					a
+						display: block
+						line-height: 40px
+					&.active
+						border-bottom: 2px solid white
+	.search
+		position: relative
+		height: 50px
+		width: 50px
+		display: flex
+		justify-content: center
+		align-items: center
+		background: #a66327
+		.search-toggle
+			font-size: 24px
+			color: white
+			height: 30px
+			line-height: 30px
+			width: 100%
+			text-align: center
+			cursor: pointer
+		.searchbox
+			position: absolute
+			top: 100%
+			right: 0
+			transform: translateY(12px)
+			opacity: 0
+			visibility: hidden
+			transition: all .3s cubic-bezier(.2,.5,.5,.8)
+			&.open
+				transform: translateY(0)
+				opacity: 1
+				visibility: visible
+		.searchinput
+			width: 200px
+			height: 30px
+			padding: 0 10px
+			border: 0
+			box-shadow: 0 0 2px rgba(0,0,0,.3)
+		.searchbutton
+			position: absolute
+			right: 0
+			top: 0
+			width: 30px
+			height: 30px
+			background: none
+			border: 0
+			font-size: 16px
+		&:hover
+			.seach
+				.searchbox
+		@media (max-width: 1199.98px)
+			&:after
+				content: ''
+				height: 30px
+				width: 1px
+				background: rgba(white,.2)
+				position: absolute
+				right: 0
+				top: 10px
+	.language
+		height: 50px
+		width: 50px
+		display: flex
+		justify-content: center
+		align-items: center
+		padding: 0 8px
+		background: #a66327
+		position: relative
+		font-size: 14px
+		@media (max-width: 1199.98px)
+			margin-left: auto
+		&:after
+			content: ''
+			height: 30px
+			width: 1px
+			background: rgba(white,.2)
+			position: absolute
+			right: 0
+			top: 10px
+		select
+			width: 44px
+			height: 100%
+			border: 0
+			background: none
+			color: white
+			option
+				color: #333333
+	.account
+		height: 50px
+		position: relative
+		background: #a66327
+		font-size: 14px
+		&:after
+			content: ''
+			height: 30px
+			width: 1px
+			background: rgba(white,.2)
+			position: absolute
+			right: 0
+			top: 10px
+			@media (max-width: 1199.98px)
+				content: none
+		.account-toggle
+			height: 100%
+			display: flex
+			align-items: center
+			color: white
+			padding: 0 10px
+			cursor: pointer
+			width: 110px
+			@media (max-width: 1199.98px)
+				padding: 0 8px
+				width: 150px
+			.mdi
+				&:before
+					margin-right: 8px
+					width: 20px
+					font-size: 18px
+		.account-menu
+			position: absolute
+			right: 0
+			width: 100%
+			display: none
+			nav
+				display: flex
+				flex-wrap: wrap
+				background: #a66327
+				box-shadow: 0 0 2px rgba(0,0,0,.3)
+				a
+					line-height: 50px
+					white-space: nowrap
+					padding: 0 10px
+					width: 100%
+					color: white
+					&:before
+						margin-right: 8px
+						width: 20px
+					&:hover
+						background: white
+						color: #b96e2b
+	.mobile-toggle
+		display: none
+		@media (max-width: 1199.98px)
+			position: relative
+			height: 50px
+			width: 50px
+			display: flex
+			justify-content: center
+			align-items: center
+			background: #a66327
+			.mdi
+				font-size: 24px
+				color: white
+				height: 30px
+				line-height: 30px
+				width: 100%
+				text-align: center
+				cursor: pointer

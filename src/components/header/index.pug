@@ -1,0 +1,54 @@
+header
+	.container
+		.row.no-gutters.top-header
+			.logo
+				a(href="/")
+					img(src="./img/logo.png", alt="")
+			.header-banner
+				a(href="#")
+					img(desktop-src="./img/header_1.jpg", alt="" mobile-src="./img/header_1_mobile.jpg")
+		.row.no-gutters.bottom-header
+			.backdrop
+			.main-nav
+				.mobile-off
+					span.mdi.mdi-close
+				ul
+					li
+						a(href="#") Giới thiệu
+					li
+						a(href="#") Hội viên
+					li.active
+						a(href="#") Tin hoạt động
+					li
+						a(href="#") Hoạt động cộng đồng
+					li
+						a(href="#") Bản tin kết nối HREC
+					li
+						a(href="#") Thư viện
+					li
+						a(href="#") Tin tức - Sự kiện
+					li
+						a(href="#") Liên hệ
+			.account
+				.account-toggle
+					span.mdi.mdi-account-outline Tài khoản
+				.account-menu
+					nav
+						a.fas.fa-user-plus(href="#")
+							span Đăng ký
+						a.fas.fa-sign-in-alt(href="#")
+							span Đăng nhập
+			.language
+				select
+					option(selected) VN
+					option EN
+			.search
+				.search-toggle
+					span.mdi.mdi-magnify
+				.Module
+					.searchbox
+						input.searchinput(type="text")
+						button.searchbutton
+							span.mdi.mdi-magnify
+			.mobile-toggle
+				span.mdi.mdi-menu
