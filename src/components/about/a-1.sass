@@ -1,10 +1,58 @@
 .about-nav-scroll
-	nav
+	height: 40px
+	.about-nav-scroll-wrapper
+		height: 40px
+		background: white
+		&.fixed
+			z-index: 100
+			position: fixed
+			top: 60px
+			width: 100%
+			left: 0
+	ul
 		background: #f5f5f5
+		height: 40px
+		font-size: 18px
 		display: flex
 		justify-content: center
-		height: 40px
 		align-items: center
+		@media (max-width: 1199.98px)
+			font-size: 14px
+		@media (max-width: 1024.98px)
+			display: none
+		li
+			padding: 0 20px
+			height: 100%
+			a
+				display: flex
+				align-items: center
+				height: 100%
+				border-bottom: 1px solid transparent
+			+ li
+				position: relative
+				&:before
+					content: ''
+					position: absolute
+					height: 15px
+					width: 1px
+					background: #999999
+					top: 50%
+					left: 0
+					transform: translateY(-50%)
+			&:hover, &.active
+				color: #a66327
+				a
+					border-bottom: 1px solid #ccb16a
+	select
+		display: none
+		@media (max-width: 1024.98px)
+			display: block
+			background: white
+			border: 1px solid rgba(0,0,0,.1)
+			height: 40px
+			font-size: 18px
+			width: 100%
+
 .about-wrapper
 	padding-top: 40px
 	.page-title 

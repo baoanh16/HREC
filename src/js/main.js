@@ -1,4 +1,4 @@
-var BottomHeaderPosition, CurrentPosition;
+var BottomHeaderPosition;
 
 $(document).ready(function () {
 	if ($(window).scrollTop() > 0) {
@@ -16,6 +16,8 @@ $(document).ready(function () {
 	GoToLink();
 	HomePartnerSlider();
 	AboutTab();
+	StickAboutNavbar();
+	AboutScrollClick();
 	// News scripts
 	SetHeightNewsItem();
 });
@@ -28,6 +30,7 @@ $(window).on('resize', function () {
 
 $(window).on('scroll', function () {
 	StickHeader();
+	StickAboutNavbar();
 })
 
 function DataBG() {
@@ -76,8 +79,7 @@ function ToggleAccount() {
 }
 
 function StickHeader() {
-	CurrentPosition = $(window).scrollTop();
-	if (CurrentPosition > 0) {
+	if ($(window).scrollTop() > 0) {
 		$('header .top-header').slideUp()
 	} else {
 		$('header .top-header').slideDown()
@@ -270,7 +272,7 @@ function AboutTab() {
 		$('[select-for="about-4"]').val(target)
 
 		// Nếu màn hình > 1025px và có nọi dung trong mỗi tab thì mỗi lần click đổi tab sẽ tự chọn lại item đầu tiên để hiện ra, nếu không có thì ẩn
-		if ($(window).outerWidth() >= 1025) { 
+		if ($(window).outerWidth() >= 1025) {
 			if ($(target + ' .staff-item').length > 0) {
 				$(target + ' .staff-item').eq(0).trigger('click')
 			} else {
@@ -297,4 +299,37 @@ function AboutTab() {
 		}
 	})
 
+}
+
+function StickAboutNavbar() {
+	if ($('.about-nav-scroll').length > 0) {
+		var ThatPosition = $('.about-nav-scroll').offset().top - 60
+		if ($(window).scrollTop() >= ThatPosition) {
+			$('.about-nav-scroll .about-nav-scroll-wrapper').addClass('fixed')
+		} else {
+			$('.about-nav-scroll .about-nav-scroll-wrapper').removeClass('fixed')
+		}
+	}
+}
+function AboutScrollClick() {
+	$('.about-nav-scroll a').each(function () {
+		$(this).on('click', function (e) {
+			e.preventDefault()
+			var target = $(this).attr('href')
+			$(this).parent().addClass('active')
+			$(this).parent().siblings('li').removeClass('active')
+			$('html,body').animate({
+				scrollTop: $(target).offset().top - 100
+			}, 1200)
+		})
+	})
+
+	$('.about-nav-scroll select').on('change', function () {
+		var target = $(this).val()
+		$('.about-nav-scroll a').each(function () {
+			if($(this).attr('href') == target){
+				$(this).trigger('click')
+			}
+		})
+	})
 }
