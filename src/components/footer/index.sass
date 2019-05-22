@@ -1,0 +1,74 @@
+footer
+	background-image: url('../img/footer_bg.png')
+	background-size: 500px
+	background-repeat: no-repeat
+	background-position: 14% 100%
+	hr
+		margin: 0
+		margin-top: 16px
+		border: 0
+		border-top: 1px solid #bbbbbb
+	.info
+		@media (max-width: 1024.98px)
+			margin-bottom: 20PX
+		h2
+			font-size: 28px
+			font-weight: 400
+			text-transform: uppercase
+		.social-list
+			margin-top: 16px
+			a
+				margin-right: 10px
+	.address
+		font-size: 14px
+		@media (max-width: 1024.98px)
+			margin-bottom: 20PX
+		a
+			color: #01336c
+			border-bottom: 1px solid #01336c
+	.footer-nav
+		ul
+			font-size: 15px
+			li
+				position: relative
+				padding-left: 20px
+				a
+					border-bottom: 1px solid transparent
+					display: inline-block
+				&:before
+					position: absolute
+					top: 50%
+					transform: translateY(-50%)
+					height: 1px
+					width: 10px
+					background: #cccccc
+					left: 0
+					content: ''
+				&:hover
+					color: #01336c
+					a
+						border-bottom: 1px solid #01336c
+	.bottom-footer
+		font-size: 13px
+		color: #808080
+		.row
+			padding-top: 16px
+			padding-bottom: 24px
+			border-top: 1px solid #cccccc
+	.copyright
+		@media (max-width: 1024.98px)
+			text-align: center
+			padding-bottom: 16px
+	.bottom-footer-nav
+		a
+			&:hover
+				color: #01336c
+			+ a
+				margin-left: 8px
+				padding-left: 8px
+				border-left: 1px solid #b9b9b9
+		@media (min-width: 1025px)
+			margin-left: auto
+		@media (max-width: 1024.98px)
+			text-align: center
+			// margin-right: 16.666%

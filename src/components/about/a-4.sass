@@ -1,0 +1,132 @@
+.about-4
+	.about-tab-wrapper
+		margin-bottom: 30px
+	nav
+		display: none
+	.tab-title
+		font-size: 18px
+		text-transform: uppercase
+		color: #947646
+	select
+		display: block
+		height: 35px
+		width: 100%
+		border: 1px solid rgba(black,.15)
+		text-transform: capitalize
+	.about-tab
+		margin-bottom: 20px
+	.list
+		max-height: 390px
+		overflow-y: auto
+		display: none
+		padding-right: 15px
+		&.show
+			display: block
+		&::-webkit-scrollbar
+			width: 5px
+			height: 100%
+			background: #f5f5f5
+		&::-webkit-scrollbar-thumb
+			background: #b96e2b
+
+	@media (min-width: 1025px)
+		.tab-title
+			display: none
+		select
+			display: none
+		nav
+			height: 100%
+			display: flex
+			justify-content: center
+			a
+				min-width: 160px
+				height: 40px
+				display: flex
+				justify-content: center
+				align-items: center
+				color: #947646
+				background: #f5f5f5
+				font-size: 14px
+				margin: 0 3px
+				text-transform: capitalize
+				padding: 0 20px
+				&.active
+					background: #b96e2b
+					color: white
+	@media (max-width: 1024.98px)
+		.col-lg-4
+			flex: 0 0 100%
+			max-width: 100%
+		.col-lg-8
+			display: none
+
+
+.staff-item
+	background: #f5f5f5
+	display: flex
+	.imgbox
+		flex: 0 0 90px
+		height: 90px
+		&.normal
+			display: none
+	.description
+		flex-basis: 0
+		flex-grow: 1
+		max-width: 100%
+		h3
+			font-size: 14px
+			font-weight: 500
+			text-transform: uppercase
+		h4
+			font-size: 14px
+			font-weight: 400
+			color: #999999
+	&:not(:last-child)
+		margin-bottom: 10px
+	&:not(#staff-item)
+		cursor: pointer
+		.description
+			padding: 20px
+		.brief-content
+			display: none
+		&:hover, &.active
+			box-shadow: 0px 0px 5.52px 2.48px rgba(0, 0, 0, 0.09)
+			.description
+				h3
+					color: #947646
+					text-decoration: underline
+	&#staff-item
+		height: 100%
+		padding: 40px
+		@media (min-width: 1025px)
+			height: 390px
+			display: flex!important
+		.description
+			overflow-y: auto
+			h3
+				font-size: 18px
+				color: #b96e2b
+				text-transform: capitalize
+		.brief-content
+			margin-top: 10px
+			font-size: 14px
+			p
+				margin-bottom: 10px
+		.imgbox
+			padding-right: 20px
+			flex: 0 0 225px
+			max-width: 225px
+			@media (max-width: 1024.98px)
+				flex: 0 0 150px
+				max-width: 150px
+				margin: 0 auto
+				padding-right: 0
+				margin-bottom: 20px
+			img
+				width: 100%
+			&.thumb
+				display: none
+			&.normal
+				display: block
+				@media (max-width: 1024.98px)
+					height: auto

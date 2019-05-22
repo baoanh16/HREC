@@ -1,4 +1,17 @@
 .home-3
+	.home-nav-wrapper
+		.home-nav
+			position: absolute
+			height: 100%
+			right: 0
+			top: 0
+			.nav-title
+				display: none
+			nav
+				height: 100%
+				display: flex
+				align-items: center
+				font-size: 15px
 	.news-list
 		margin: 0 -10px
 		display: flex
@@ -13,8 +26,15 @@
 			&.side
 				flex: 0 0 50%
 				max-width: 50%
+			&.big
+				flex: 0 0 100%
+				max-width: 100%
+		@media (min-width: 768px)
+			&.side,&.big
+				flex: 0 0 33.3333%
+				max-width: 33.3333%
 		@media (min-width: 1025px)
-			&.large
+			&.big
 				flex: 0 0 50%
 				max-width: 50%
 			&.side

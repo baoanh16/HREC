@@ -1,14 +1,14 @@
 mixin news1(classType)
 	- if(classType == null)
 		- var type = 'news-1-item'
-	- if(classType == 'large')
-		- var type = 'news-1-item large'
+	- if(classType == 'big')
+		- var type = 'news-1-item big'
 	- if(classType == 'side')
 		- var type = 'news-1-item side'
 	div(class=type)
 		article
-			.imgbox.lazyload(data-bg="./img/news/1.jpg")
-				a(href="news-detail.html")
+			.imgbox
+				a(href="news-detail.html" data-bg="./img/news/1.jpg")
 					img.lazyload(data-src="./img/news/1.jpg", alt="")
 			.info
 				time.createdDate 24/02/2019
@@ -16,3 +16,30 @@ mixin news1(classType)
 					a(href="news-detail.html") Hội thảo: CHIA SẺ KINH NGHIỆM QUẢN TRỊ DOANH NGHIỆP
 				p Chiều ngày 15/1, tại Gem Center (Nguyễn Bỉnh Khiêm, Quận 1, TP.HCM), Câu lạc bộ Thương hiệu Việt (CLB VBC) và câu lạc bộ Bất động sản TP.HCM (HREC) đã tổ chức hội thảo “Chia sẻ... kinh nghiệm quản trị doanh nghiệp” do ông Đặng Văn Thành - Chủ tịch CLB VBC; Chủ Tịch Danh Dự CLB HREC Chiều ngày 15/1, tại Gem Center (Nguyễn Bỉnh Khiêm, Quận 1, TP.HCM), Câu lạc bộ Thương hiệu Việt (CLB VBC) và câu lạc bộ Bất động sản TP.HCM (HREC) đã tổ chức hội thảo “Chia sẻ... kinh nghiệm quản trị doanh nghiệp” do ông Đặng Văn Thành - Chủ tịch CLB VBC; Chủ Tịch Danh Dự CLB HREC Chiều ngày 15/1, tại Gem Center (Nguyễn Bỉnh Khiêm, Quận 1, TP.HCM), Câu lạc bộ Thương hiệu Việt (CLB VBC) và câu lạc bộ Bất động sản TP.HCM (HREC) đã tổ chức hội thảo “Chia sẻ... kinh nghiệm quản trị doanh nghiệp” do ông Đặng Văn Thành - Chủ tịch CLB VBC; Chủ Tịch Danh Dự CLB HREC Chiều ngày 15/1, tại Gem Center (Nguyễn Bỉnh Khiêm, Quận 1, TP.HCM), Câu lạc bộ Thương hiệu Việt (CLB VBC) và câu lạc bộ Bất động sản TP.HCM (HREC) đã tổ chức hội thảo “Chia sẻ... kinh nghiệm quản trị doanh nghiệp” do ông Đặng Văn Thành - Chủ tịch CLB VBC; Chủ Tịch Danh Dự CLB HREC Chiều ngày 15/1, tại Gem Center (Nguyễn Bỉnh Khiêm, Quận 1, TP.HCM), Câu lạc bộ Thương hiệu Việt (CLB VBC) và câu lạc bộ Bất động sản TP.HCM (HREC) đã tổ chức hội thảo “Chia sẻ... kinh nghiệm quản trị doanh nghiệp” do ông Đặng Văn Thành - Chủ tịch CLB VBC; Chủ Tịch Danh Dự CLB HREC Chiều ngày 15/1, tại Gem Center (Nguyễn Bỉnh Khiêm, Quận 1, TP.HCM), Câu lạc bộ Thương hiệu Việt (CLB VBC) và câu lạc bộ Bất động sản TP.HCM (HREC) đã tổ chức hội thảo “Chia sẻ... kinh nghiệm quản trị doanh nghiệp” do ông Đặng Văn Thành - Chủ tịch CLB VBC; Chủ Tịch Danh Dự CLB HREC Chiều ngày 15/1, tại Gem Center (Nguyễn Bỉnh Khiêm, Quận 1, TP.HCM), Câu lạc bộ Thương hiệu Việt (CLB VBC) và câu lạc bộ Bất động sản TP.HCM (HREC) đã tổ chức hội thảo “Chia sẻ... kinh nghiệm quản trị doanh nghiệp” do ông Đặng Văn Thành - Chủ tịch CLB VBC; Chủ Tịch Danh Dự CLB HREC Chiều ngày 15/1, tại Gem Center (Nguyễn Bỉnh Khiêm, Quận 1, TP.HCM), Câu lạc bộ Thương hiệu Việt (CLB VBC) và câu lạc bộ Bất động sản TP.HCM (HREC) đã tổ chức hội thảo “Chia sẻ... kinh nghiệm quản trị doanh nghiệp” do ông Đặng Văn Thành - Chủ tịch CLB VBC; Chủ Tịch Danh Dự CLB HREC
  
+mixin news2
+	div.news-2-item
+		article
+			.imgbox
+				a(href="news-detail.html" data-bg="./img/news/1.jpg")
+					img(src="./img/news/1.jpg", alt="")
+			.info
+				time 24/02/2019
+				h3
+					a(href="news-detail.html") Tham quan dự án – Kết nối Đầu tư tại Huyện Củ Chi
+				p Sáng nay ngày 14/02/2019, Báo Doanh Nhân Sài Gòn do Ông Trần Hoàng - Phó Tổng biên tập phụ trách và các cán bộ của Tòa soạn đã đến chúc Tết CLB Bất động sản TP.HCM (HREC) nhân dịp đầu năm Kỷ Hợi 2019
+ 
+mixin news3(classType)
+	- if(classType == null)
+		- var type = 'news-3-item'
+	- if(classType == 'big')
+		- var type = 'news-3-item big'
+	div(class=type)
+		article
+			.imgbox
+				a(href="news-detail.html" data-bg="./img/news/1.jpg")
+					img(src="./img/news/1.jpg", alt="")
+			.info
+				time 24/02/2019
+				h3
+					a(href="news-detail.html") Tham quan dự án – Kết nối Đầu tư tại Huyện Củ Chi
+				p Sáng nay ngày 14/02/2019, Báo Doanh Nhân Sài Gòn do Ông Trần Hoàng - Phó Tổng biên tập phụ trách và các cán bộ của Tòa soạn đã đến chúc Tết CLB Bất động sản TP.HCM (HREC) nhân dịp đầu năm Kỷ Hợi 2019

@@ -1,0 +1,36 @@
+.gallery-item
+	article
+		position: relative
+		background: black
+	.imgbox
+		opacity: .8
+		img
+			opacity: 0
+	.info
+		a
+			position: absolute
+			width: 100%
+			height: 100%
+			left: 0
+			top: 0
+			display: flex
+			justify-content: center
+			align-items: center
+			flex-direction: column
+			img
+				width: 40px
+				margin-bottom: 12px
+			h3
+				font-size: 20px
+				font-weight: 500
+				color: white
+				text-align: center
+				max-width: 270px
+			@media (max-width: 1199.98px)
+				h3
+					font-size: 18px
+			@media (max-width: 1024.98px)
+				img
+					width: 30px
+				h3
+					font-size: 16px

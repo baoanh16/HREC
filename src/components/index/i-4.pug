@@ -1,0 +1,35 @@
+include ../_global/news
+
+
+.home-4.pt-60
+	.container
+		.home-nav-wrapper
+			h2.main-title tin tức hoạt động
+			.home-nav
+				.nav-title Chuyên mục
+				nav
+					a(href="#") Thông tin hoạt động BCH
+					a(href="#") Thông tin hoạt động hội viên
+					a(href="#") Thông tin sự kiện HREC
+					a(href="#") Liên kết - Giao thương
+				select
+					option(value="#") Thông tin hoạt động BCH
+					option(value="#") Thông tin hoạt động hội viên
+					option(value="#") Thông tin sự kiện HREC
+					option(value="#") Liên kết - Giao thương
+		.row
+			.col-lg-9
+				.news-list.row
+					+news2
+					+news2
+					+news2
+					+news2
+					+news2
+			.col-lg-3
+				.row.banner-list
+					.banner-item.col-6.col-sm-4.col-lg-12
+						a(href="#")
+							img(src="./img/index/3.jpg", alt="")
+					.banner-item.col-6.col-sm-4.col-lg-12
+						a(href="#")
+							img(src="./img/index/4.jpg", alt="")

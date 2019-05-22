@@ -3,13 +3,15 @@ include ../_global/news
 
 .home-3.pt-60
 	.container
-		.nav-wrapper
+		.home-nav-wrapper
 			h2.main-title sự kiện
-			nav
-				a.btn-link(href="#") 
-					span Xem tất cả
-					span.mdi.mdi-arrow-right
+			.home-nav
+				.nav-title Chuyên mục
+				nav
+					a.btn-link(href="/su-kien") 
+						span Xem tất cả
+						span.mdi.mdi-arrow-right
 		.news-list.clearfix
-			+news1('large')
+			+news1('big')
 			+news1('side')
 			+news1('side')

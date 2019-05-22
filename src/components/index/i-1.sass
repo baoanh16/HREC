@@ -14,11 +14,25 @@
 			color: white
 			font-weight: 300
 			margin-bottom: 10px
+	.swiper-pagination
+		bottom: 30px
+		width: auto
+		.swiper-pagination-bullet
+			width: 8px
+			height: 8px
+			background: white
+			border-radius: 0
+			opacity: 1
+			&.swiper-pagination-bullet-active
+				background: #947646
+		@media (max-width: 1024.98px)
+			position: static
+			.swiper-pagination-bullet
+				background: rgba(black,.3)
 	.banner-left
 		margin-bottom: 10px
-		@media (min-width: 1025px)
-			padding-right: 10px
-			margin-bottom: 0
+		.swiper-pagination
+			left: 45px
 		.swiper-slide
 			h2
 				font-size: 44px
@@ -29,7 +43,10 @@
 			.content
 				padding: 15px
 				background: #a0834e
-			@media (min-width: 1025px)
+		@media (min-width: 1025px)
+			padding-right: 10px
+			margin-bottom: 0
+			.swiper-slide
 				position: relative
 				.content
 					background: none
@@ -59,6 +76,8 @@
 			@media (max-width: 1024.98px)
 				position: static
 				margin-bottom: 10px
+		.swiper-pagination
+			left: 15px
 		.swiper-slide
 			background: black
 			.imgbox

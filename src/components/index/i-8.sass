@@ -1,0 +1,30 @@
+.home-8
+	.slider-wrapper
+		position: relative
+		.swiper-slide
+			background: #f5f5f5
+		.swiper-prev,.swiper-next
+			position: absolute
+			top: 50%
+			width: 24px
+			height: 24px
+			display: flex
+			justify-content: center
+			align-items: center
+			cursor: pointer
+			transform: translateY(-50%)
+			margin: 0 10px
+			&:focus, &:active
+				outline: none
+		.swiper-prev
+			right: 100%
+		.swiper-next
+			left: 100%
+		@media (max-width: 1024.98px)
+			.swiper-nav
+				display: flex
+				justify-content: center
+				margin-top: 10px
+			.swiper-prev,.swiper-next
+				position: static
+				transform: none

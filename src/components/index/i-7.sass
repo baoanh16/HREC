@@ -1,0 +1,51 @@
+.home-7
+	.home-7-row
+		display: flex
+		flex-wrap: wrap
+		margin: 0 -2.5px
+	.col-gallery
+		flex: 0 0 100%
+		max-width: 100%
+		padding-left: 2.5px
+		padding-right: 2.5px
+		&:nth-child(1)
+			margin-bottom: 10px
+		@media (min-width: 1025px)
+			flex: 0 0 50%
+			max-width: 50%
+	.swiper-container
+		max-width: 576px
+		width: 100%
+		@media (min-width: 1025px)
+			max-width: 100%
+		.swiper-pagination
+			bottom: 20px
+			.swiper-pagination-bullet
+				width: 8px
+				height: 8px
+				background: white
+				border-radius: 0
+				opacity: 1
+				&.swiper-pagination-bullet-active
+					background: #947646
+			@media (max-width: 1024.98px)
+				position: static
+				.swiper-pagination-bullet
+					background: rgba(black,.3)
+					
+	.gallery-vid
+		padding: 0 2.5px
+		flex: 0 0 100%
+		max-width: 100%
+		margin-bottom: 5px
+	@media (min-width: 576px)
+		.gallery-vid
+			flex: 0 0 50%
+			max-width: 50%
+	@media (min-width: 1025px)
+		.gallery-img
+			.imgbox
+				height: 365px
+		.gallery-vid
+			.imgbox
+				height: 180px

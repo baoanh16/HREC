@@ -1,0 +1,18 @@
+mixin GalleryItem(classType)
+	- if(classType == 'img')
+		- var type = 'gallery-img gallery-item'
+	- if(classType == 'vid')
+		- var type = 'gallery-vid gallery-item'
+	div(class=type)
+		article
+			.imgbox(data-bg="./img/news/1.jpg")
+				img(src="./img/news/1.jpg", alt="")
+			.info
+				a(href="./img/news/1.jpg" data-fancybox="gallery_1")
+					img(src="./img/btn_"+classType+".png")
+					h3 Họp mặt Hội viên và Hội thảo Đô thị thông minh
+			.d-none
+				a(href="./img/news/1.jpg" data-fancybox="gallery_1")
+				a(href="./img/news/1.jpg" data-fancybox="gallery_1")
+				a(href="./img/news/1.jpg" data-fancybox="gallery_1")
+				a(href="./img/news/1.jpg" data-fancybox="gallery_1")
