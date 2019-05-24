@@ -4,6 +4,9 @@ $(document).ready(function () {
 	if ($(window).scrollTop() > 0) {
 		$('header .top-header').hide()
 	}
+	$('[data-provide]').datepicker({
+		format: 'dd/mm/yyyy',
+	});
 	DataBG();
 	ChangeHeaderBannerByScreenSize();
 	ToggleMenuMobile();
@@ -18,6 +21,9 @@ $(document).ready(function () {
 	AboutTab();
 	StickAboutNavbar();
 	AboutScrollClick();
+	FormRegisterCaptcha();
+	FixedHeightProjectItem();
+	FaqItemToggle();
 	// News scripts
 	SetHeightNewsItem();
 });
@@ -26,6 +32,7 @@ $(window).on('resize', function () {
 	ChangeHeaderBannerByScreenSize();
 	// News scripts
 	SetHeightNewsItem();
+	FixedHeightProjectItem();
 })
 
 $(window).on('scroll', function () {
@@ -211,7 +218,32 @@ function SetupFancybox() {
 
 
 function GoToLink() {
+	$('.language select').each(function () {
+		$(this).on('change', function () {
+			// var FullUrl = window.location.host +'/'+ $(this).val()
+			var FullUrl = $(this).val()
+			// console.log(FullUrl)
+			window.location.assign(FullUrl)
+		})
+	})
 	$('.home-nav-wrapper select').each(function () {
+		$(this).on('change', function () {
+			// var FullUrl = window.location.host +'/'+ $(this).val()
+			var FullUrl = $(this).val()
+			// console.log(FullUrl)
+			window.location.assign(FullUrl)
+		})
+	})
+
+	$('.news-tab-wrapper select').each(function () {
+		$(this).on('change', function () {
+			// var FullUrl = window.location.host +'/'+ $(this).val()
+			var FullUrl = $(this).val()
+			// console.log(FullUrl)
+			window.location.assign(FullUrl)
+		})
+	})
+	$('.document-nav select').each(function () {
 		$(this).on('change', function () {
 			// var FullUrl = window.location.host +'/'+ $(this).val()
 			var FullUrl = $(this).val()
@@ -327,9 +359,29 @@ function AboutScrollClick() {
 	$('.about-nav-scroll select').on('change', function () {
 		var target = $(this).val()
 		$('.about-nav-scroll a').each(function () {
-			if($(this).attr('href') == target){
+			if ($(this).attr('href') == target) {
 				$(this).trigger('click')
 			}
 		})
+	})
+}
+function FormRegisterCaptcha() {
+	var placeHolder = $('.frm-captcha-input label').html()
+	$('.frm-captcha-input input').attr('placeholder', placeHolder)
+	$('.frm-captcha-input label').remove()
+}
+
+function FixedHeightProjectItem() {
+	$('.project-item .imgbox a').each(function () {
+		$(this).height($(this).width() / (400 / 270))
+	})
+}
+
+function FaqItemToggle() {
+	$('.faq .faq-item .title').on('click', function () {
+		$(this).parent().addClass('active')
+		$(this).parent().children('.info').slideToggle()
+		$(this).parent().siblings('.faq-item').removeClass('active')
+		$(this).parent().siblings('.faq-item').children('.info').slideUp()
 	})
 }

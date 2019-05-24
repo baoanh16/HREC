@@ -1,0 +1,67 @@
+.news-act-1
+	.big
+		margin: 0 auto
+		margin-bottom: 20px
+		@media (min-width: 1025px)
+			margin-bottom: 0
+			.info
+				h3
+					font-size: 30px
+	.side-list
+		.news-2-item
+			flex: 0 0 100%
+			max-width: 100%
+			padding: 0 10px
+			article
+				border-top: 1px dashed #e1e1e1
+			.info
+				p
+					display: none
+			.imgbox
+				display: none
+			@media (min-width: 576px)
+				flex: 0 0 50%
+				max-width: 50%
+			@media (min-width: 768px)
+				flex: 0 0 33.3333%
+				max-width: 33.3333%
+			@media (min-width: 1025px)
+				flex: 0 0 100%
+				max-width: 100%
+				&:nth-child(1)
+					article
+						border-top: 0
+					.info
+						padding-top: 0
+	.news-list-bottom
+		padding-top: 20px
+		margin-top: 20px
+		position: relative
+		justify-content: center
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			left: 10px
+			right: 10px
+			height: 1px
+			background: #e1e1e1
+		.news-2-item
+			flex: 0 0 100%
+			max-width: 100%
+			padding: 0 10px
+			margin-bottom: 20px
+			.info
+				p
+					display: none
+			@media (min-width: 576px)
+				flex: 0 0 50%
+				max-width: 50%
+			@media (min-width: 768px)
+				flex: 0 0 33.3333%
+				max-width: 33.3333%
+	.banner-list
+		justify-content: center
+		margin-bottom: -40px
+		.banner-item
+			margin-bottom: 40px

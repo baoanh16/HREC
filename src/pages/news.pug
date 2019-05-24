@@ -1,1 +1,9 @@
 extends _layout.pug
+
+block var
+	- var title = 'Tin tức sự kiện'
+	- var bodyClass = 'news-page'
+
+block main
+	include ../components/banner/b-1
+	include ../components/news/n-1

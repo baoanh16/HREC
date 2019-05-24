@@ -1,0 +1,32 @@
+include ../_global/gallery
+
+.home-7.gallery-img.pt-60
+	.container
+		.news-tab-wrapper
+			h2.page-title Thư viện HREC
+			.news-tab
+				.tab-title Chuyên mục
+				nav
+					a.active(href="#") Hình ảnh
+					a(href="#") Video
+				select
+					option(value="#" selected) Hình ảnh
+					option(value="#") Video
+		.home-7-row
+			.col-gallery.big
+				+GalleryItem('img')
+			.col-gallery.side
+				.home-7-row
+					+GalleryItem('img')
+					+GalleryItem('img')
+					+GalleryItem('img')
+					+GalleryItem('img')
+		.home-7-row
+			.col-gallery.big
+				+GalleryItem('img')
+			.col-gallery.side
+				.home-7-row
+					+GalleryItem('img')
+					+GalleryItem('img')
+					+GalleryItem('img')
+					+GalleryItem('img')

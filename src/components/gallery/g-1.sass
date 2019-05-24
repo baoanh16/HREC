@@ -1,0 +1,24 @@
+.gallery-img.home-7
+	.home-7-row
+		@media (min-width: 1025px)
+			margin-bottom: -5px
+	.gallery-wrapper
+		>.home-7-row
+			@media (max-width: 1025px)
+				&:nth-child(2)
+					.side
+						order: 2
+					.big
+						order: 1
+						margin-bottom: 5px
+.side
+	.gallery-item
+		.info
+			a
+				h3
+					display: block
+					display: -webkit-box
+					-webkit-line-clamp: 2
+					-webkit-box-orient: vertical
+					overflow: hidden
+					text-overflow: ellipsis

@@ -9,10 +9,12 @@
 		padding-left: 2.5px
 		padding-right: 2.5px
 		&:nth-child(1)
-			margin-bottom: 10px
+			margin-bottom: 5px
 		@media (min-width: 1025px)
 			flex: 0 0 50%
 			max-width: 50%
+			&:nth-child(1)
+				margin-bottom: 10px
 	.swiper-container
 		max-width: 576px
 		width: 100%
@@ -32,20 +34,22 @@
 				position: static
 				.swiper-pagination-bullet
 					background: rgba(black,.3)
-					
-	.gallery-vid
-		padding: 0 2.5px
-		flex: 0 0 100%
-		max-width: 100%
-		margin-bottom: 5px
-	@media (min-width: 576px)
-		.gallery-vid
-			flex: 0 0 50%
-			max-width: 50%
+	.col-gallery.side				
+		.gallery-item
+			padding: 0 2.5px
+			flex: 0 0 100%
+			max-width: 100%
+			margin-bottom: 5px
+		@media (min-width: 576px)
+			.gallery-item
+				flex: 0 0 50%
+				max-width: 50%
 	@media (min-width: 1025px)
-		.gallery-img
-			.imgbox
-				height: 365px
-		.gallery-vid
-			.imgbox
-				height: 180px
+		.col-gallery.big
+			.gallery-item
+				.imgbox
+					height: 365px
+		.col-gallery.side	
+			.gallery-item
+				.imgbox
+					height: 180px

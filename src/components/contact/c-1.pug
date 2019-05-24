@@ -1,0 +1,76 @@
+.contact-page.pd-60
+	.container
+		h2.page-title Liên hệ
+		.row
+			.col-lg-4
+				.textbox
+					.logo
+						img(src="./img/logo.png", alt="")
+					h2 Câu lạc bộ Bất động sản Tp. Hồ chí minh
+					.contact-info
+						span.mdi.mdi-map-marker
+						p
+							strong Địa chỉ: 
+							span Lầu 2, 199 Phan Đình Phùng, Phường 17, Quận Phú Nhuận, TP. Hồ Chí Minh
+					.contact-info
+						span.mdi.mdi-phone
+						p
+							strong Điện thoại: 
+							span (08) 1234 5678 
+					.contact-info
+						span.mdi.mdi-printer
+						p
+							strong Fax: 
+							span.hotline (08) 2345 6789 
+					.contact-info
+						span.mdi.mdi-phone-in-talk
+						p
+							strong Hotline: 
+							span 123 456 789
+					.contact-info
+						span.mdi.mdi-email
+						p
+							strong Email: 
+							a(href="#") chamsockhachhang@hrec.vn
+			.col-lg-8
+				.wrap-form
+					.row
+						.form-group.col-sm-6
+							label Tên công ty
+							input(type="text")
+						.form-group.col-sm-6
+							label Số điện thoại
+							input(type="text")
+						.form-group.col-sm-6
+							label Tên công ty
+							input(type="text")
+						.form-group.col-sm-6
+							label Số điện thoại
+							input(type="text")
+						.form-group.col-sm-6
+							label Tên công ty
+							input(type="text")
+						.form-group.col-sm-6
+							label Số điện thoại
+							input(type="text")
+						.form-group.col-12
+							label Số điện thoại
+							textarea
+					.form-group.frm-captcha
+						.frm-captcha-input
+							label.label Nhập mã hiển thị
+							input(type='text')
+						.RadCaptcha.RadCaptcha_Default(style='width:50%;')
+							span(style='visibility:hidden;') Mã không đúng.
+							div
+								div
+									img(alt='', src='./img/captcha.gif')
+									a.rcRefreshImage(title='Hình ảnh mới', href="javascript:__doPostBack('ctl00$mainContent$ctl01$captcha$CaptchaLinkButton','')", style='display:block;') Hình ảnh mới
+							input(type='hidden', autocomplete='off')
+					.form-group.frm-btnwrap
+						label.label  
+						.frm-btn
+							input#ctl00_mainContent_ctl01_btnSubmit.btn.btn-default.frm-btn-submit(type='submit', name='ctl00$mainContent$ctl01$btnSubmit', value='Đăng ký', onclick='javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("ctl00$mainContent$ctl01$btnSubmit", "", true, "formwizard2b867121-df13-4cae-af80-427d359304c7", "", false, false))')
+			.col-12
+				.map.pt-60
+					iframe(src="", frameborder="0")

@@ -1,0 +1,40 @@
+include ../_global/news
+
+
+.home-3.news-1.pt-60
+	.container
+		.news-tab-wrapper
+			h2.page-title Tin tức sự kiện
+			.news-tab
+				.tab-title Chuyên mục
+				nav
+					a.active(href="#") Tin tức
+					a(href="#") Sự kiện
+				select
+					option(value="#" selected) Tin tức
+					option(value="#") Sự kiện
+		.news-list.clearfix
+			+news1('big')
+			+news1('side')
+			+news1('side')
+	.container
+		.row
+			.col-lg-9
+				.news-list-bottom.row
+					+news1
+					+news1
+					+news1
+					+news1
+					+news1
+					+news1
+					+news1
+					+news1
+					+news1
+			.col-lg-3
+				.row.banner-list
+					.banner-item.col-6.col-sm-4.col-lg-3.col-lg-12
+						a(href="#")
+							img(src="./img/news/news_banner_3.jpg", alt="")
+					.banner-item.col-6.col-sm-4.col-lg-3.col-lg-12
+						a(href="#")
+							img(src="./img/news/news_banner_4.jpg", alt="")

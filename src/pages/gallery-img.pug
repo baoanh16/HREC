@@ -1,1 +1,9 @@
 extends _layout.pug
+
+block var
+	- var title = 'Thư viện - Hình ảnh'
+	- var bodyClass = 'gallery-img-page'
+
+block main
+	include ../components/banner/b-1
+	include ../components/gallery/g-1

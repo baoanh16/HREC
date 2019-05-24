@@ -16,8 +16,12 @@ mixin news1(classType)
 					a(href="news-detail.html") Hội thảo: CHIA SẺ KINH NGHIỆM QUẢN TRỊ DOANH NGHIỆP
 				p Chiều ngày 15/1, tại Gem Center (Nguyễn Bỉnh Khiêm, Quận 1, TP.HCM), Câu lạc bộ Thương hiệu Việt (CLB VBC) và câu lạc bộ Bất động sản TP.HCM (HREC) đã tổ chức hội thảo “Chia sẻ... kinh nghiệm quản trị doanh nghiệp” do ông Đặng Văn Thành - Chủ tịch CLB VBC; Chủ Tịch Danh Dự CLB HREC Chiều ngày 15/1, tại Gem Center (Nguyễn Bỉnh Khiêm, Quận 1, TP.HCM), Câu lạc bộ Thương hiệu Việt (CLB VBC) và câu lạc bộ Bất động sản TP.HCM (HREC) đã tổ chức hội thảo “Chia sẻ... kinh nghiệm quản trị doanh nghiệp” do ông Đặng Văn Thành - Chủ tịch CLB VBC; Chủ Tịch Danh Dự CLB HREC Chiều ngày 15/1, tại Gem Center (Nguyễn Bỉnh Khiêm, Quận 1, TP.HCM), Câu lạc bộ Thương hiệu Việt (CLB VBC) và câu lạc bộ Bất động sản TP.HCM (HREC) đã tổ chức hội thảo “Chia sẻ... kinh nghiệm quản trị doanh nghiệp” do ông Đặng Văn Thành - Chủ tịch CLB VBC; Chủ Tịch Danh Dự CLB HREC Chiều ngày 15/1, tại Gem Center (Nguyễn Bỉnh Khiêm, Quận 1, TP.HCM), Câu lạc bộ Thương hiệu Việt (CLB VBC) và câu lạc bộ Bất động sản TP.HCM (HREC) đã tổ chức hội thảo “Chia sẻ... kinh nghiệm quản trị doanh nghiệp” do ông Đặng Văn Thành - Chủ tịch CLB VBC; Chủ Tịch Danh Dự CLB HREC Chiều ngày 15/1, tại Gem Center (Nguyễn Bỉnh Khiêm, Quận 1, TP.HCM), Câu lạc bộ Thương hiệu Việt (CLB VBC) và câu lạc bộ Bất động sản TP.HCM (HREC) đã tổ chức hội thảo “Chia sẻ... kinh nghiệm quản trị doanh nghiệp” do ông Đặng Văn Thành - Chủ tịch CLB VBC; Chủ Tịch Danh Dự CLB HREC Chiều ngày 15/1, tại Gem Center (Nguyễn Bỉnh Khiêm, Quận 1, TP.HCM), Câu lạc bộ Thương hiệu Việt (CLB VBC) và câu lạc bộ Bất động sản TP.HCM (HREC) đã tổ chức hội thảo “Chia sẻ... kinh nghiệm quản trị doanh nghiệp” do ông Đặng Văn Thành - Chủ tịch CLB VBC; Chủ Tịch Danh Dự CLB HREC Chiều ngày 15/1, tại Gem Center (Nguyễn Bỉnh Khiêm, Quận 1, TP.HCM), Câu lạc bộ Thương hiệu Việt (CLB VBC) và câu lạc bộ Bất động sản TP.HCM (HREC) đã tổ chức hội thảo “Chia sẻ... kinh nghiệm quản trị doanh nghiệp” do ông Đặng Văn Thành - Chủ tịch CLB VBC; Chủ Tịch Danh Dự CLB HREC Chiều ngày 15/1, tại Gem Center (Nguyễn Bỉnh Khiêm, Quận 1, TP.HCM), Câu lạc bộ Thương hiệu Việt (CLB VBC) và câu lạc bộ Bất động sản TP.HCM (HREC) đã tổ chức hội thảo “Chia sẻ... kinh nghiệm quản trị doanh nghiệp” do ông Đặng Văn Thành - Chủ tịch CLB VBC; Chủ Tịch Danh Dự CLB HREC
  
-mixin news2
-	div.news-2-item
+mixin news2(classType)
+	- if(classType == null)
+		- var type = 'news-2-item'
+	- if(classType == 't-2')
+		- var type = 'news-2-item t-2'
+	div(class=type)
 		article
 			.imgbox
 				a(href="news-detail.html" data-bg="./img/news/1.jpg")

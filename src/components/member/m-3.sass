@@ -1,0 +1,129 @@
+.news-tab-wrapper.member
+	.news-tab
+		margin-bottom: 30px
+.register-member
+	.form-register-wrapper
+		margin-bottom: -30px
+		.container
+			padding-bottom: 30px
+			>.row
+				justify-content: center
+				
+.form-group
+	margin-bottom: 14px
+	label
+		font-size: 15px
+		font-weight: 400
+		margin-bottom: 6px
+	input[type="text"], textarea,input[type="password"]
+		background: #f9f9f9
+		border: 1px solid #e1e1e1
+		width: 100%
+		padding: 5px 10px
+		font-size: 14px
+		&:focus
+			outline: none
+			border: 1px solid #b96e2b
+			box-shadow: 0 0 .2rem #b96e2b
+	input[type="text"],input[type="password"]
+		height: 45px
+	textarea
+		height: 90px
+	&.form-file
+		.file-wrapper
+			position: relative
+		input[type="file"]
+			width: 100px
+			height: 25px
+			opacity: 0
+			position: relative
+			z-index: 10
+			cursor: pointer
+		input[type="submit"]
+			position: absolute
+			padding: 0
+			font-size: 14px
+			background: #f9f9f9
+			border: 1px solid #e1e1e1
+			width: 100px
+			height: 25px
+			top: 0
+			left: 0
+			z-index: 5
+			cursor: pointer
+			display: flex
+			justify-content: center
+			align-items: center
+	&.frm-captcha
+		display: flex
+		align-items: flex-end
+		.RadCaptcha.RadCaptcha_Default
+			width: 100%
+			max-width: 315px
+			flex: 0 0 100%
+			position: relative
+			order: 1
+			>span
+				position: absolute
+				top: 100%
+			>div>div
+				display: flex
+				img
+					height: 50px!important
+					width: 190px!important
+				a
+					width: 50px
+					margin: 0 22.5px
+					display: block
+					height: 50px
+					background-image: url('../img/captcha_reload.png')
+					background-repeat: no-repeat
+					background-position: center
+					font-size: 0
+		.frm-captcha-input
+			order: 2
+			input
+				height: 50px
+				width: 295px
+				@media (max-width: 1359.98px)
+					width: 205px
+		@media (max-width: 767.98px)
+			flex: 0 0 100%
+			max-width: 100%
+			flex-wrap: wrap
+			.frm-captcha-input
+				flex: 0 0 100%
+				max-width: 100%
+				input
+					width: 100%
+			.RadCaptcha.RadCaptcha_Default
+				flex: 0 0 100%
+				max-width: 100%
+				margin-bottom: 14px
+				>div>div
+					justify-content: center
+					a
+						margin-right: 0
+	&.frm-btnwrap
+		margin-bottom: 0
+		margin-left: auto
+		@media (max-width: 767.98px)
+			margin-right: auto
+			width: 100%
+		label
+			display: none
+		.frm-btn-submit
+			height: 50px
+			width: 190px
+			background: #b96e2b
+			border: 0
+			display: flex
+			justify-content: center
+			align-items: center
+			text-transform: uppercase
+			color: white
+			font-size: 16px
+			@media (max-width: 767.98px)
+				width: 100%
+		.frm-btn-reset
+			display: none

@@ -1,9 +1,9 @@
 mixin GalleryItem(classType)
 	- if(classType == 'img')
-		- var type = 'gallery-img gallery-item'
+		- var type = 'gallery-item'
 	- if(classType == 'vid')
 		- var type = 'gallery-vid gallery-item'
-	div(class=type)
+	.gallery-item
 		article
 			.imgbox(data-bg="./img/news/1.jpg")
 				img(src="./img/news/1.jpg", alt="")

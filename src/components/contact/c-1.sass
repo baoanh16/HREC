@@ -1,0 +1,86 @@
+.contact-page
+	.frm-captcha
+		margin-top: 10px
+		margin-bottom: 0
+	.frm-btnwrap
+		margin-top: 20px
+	@media (min-width: 768px)
+		.wrap-form
+			position: relative
+		.frm-btnwrap
+			position: absolute
+			right: 0
+			bottom: 0
+	@media (min-width: 1025px)
+		.frm-captcha,.frm-btnwrap
+			justify-content: center
+			.frm-btn
+				justify-content: center
+		.frm-btnwrap
+			position: static
+		.form-group.frm-captcha
+			.frm-captcha-input
+				margin-left: auto
+				input
+					width: 300px
+	@media (min-width: 1200px)
+		.frm-captcha,.frm-btnwrap
+			justify-content: flex-start
+			.frm-btn
+				justify-content: center
+		.form-group.frm-captcha
+			.frm-captcha-input
+				margin-left: 0
+				input
+					width: 205px
+		.frm-btnwrap
+			position: absolute
+			right: 0
+			bottom: 0
+	@media (min-width: 1360px)
+		.form-group.frm-captcha
+			.frm-captcha-input
+				input
+					width: 295px
+
+	.textbox
+		height: 100%
+		background-color: #f9f9f9
+		background-image: url(../img/footer_bg.png)
+		background-position: 30px 126%
+		background-repeat: no-repeat
+		background-size: 510px
+		padding: 35px 40px
+		@media (max-width: 1024.98px)
+			margin-bottom: 30px
+		.logo
+			margin-bottom: 20px
+			img
+				max-width: 100px
+		h2
+			font-size: 18px
+			font-weight: 500
+			text-transform: uppercase
+			margin-bottom: 14px
+		.mdi
+			color: #b86d33
+		.contact-info
+			display: flex
+			font-size: 14px
+			margin-bottom: 7px
+			.mdi
+				flex: 0 0 25px
+				max-width: 25px
+			.hotline
+				font-weight: 700
+				color: #b86d33
+			a
+				color: #01336c
+				text-decoration: underline
+	.map
+		iframe
+			box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.18);
+			height: 520px
+			width: 100%
+			@media (max-width: 767.98px)
+				height: 250px

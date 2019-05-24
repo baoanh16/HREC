@@ -1,1 +1,11 @@
 extends _layout.pug
+
+block var
+	- var title = 'Hoạt động xã hội'
+	- var bodyClass = 'news-activity-page'
+
+block main
+	include ../components/banner/b-1
+	include ../components/news-social/n-1
+	include ../components/news-social/n-2
+	include ../components/news-social/n-3

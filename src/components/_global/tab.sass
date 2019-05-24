@@ -1,0 +1,49 @@
+.news-tab-wrapper
+	margin-bottom: 30px
+	nav
+		display: none
+	.tab-title
+		font-size: 18px
+		text-transform: uppercase
+		color: #947646
+	select
+		display: block
+		height: 35px
+		width: 100%
+		border: 1px solid rgba(black,.15)
+		text-transform: capitalize
+	@media (min-width: 1025px)
+		.tab-title
+			display: none
+		select
+			display: none
+		nav
+			height: 100%
+			display: flex
+			justify-content: center
+			a
+				min-width: 160px
+				height: 40px
+				display: flex
+				justify-content: center
+				align-items: center
+				color: #947646
+				background: #f5f5f5
+				font-size: 14px
+				margin: 0 3px
+				text-transform: capitalize
+				padding: 0 20px
+				&.active, &:hover
+					background: #b96e2b
+					color: white
+					position: relative
+					&:before
+						content: ''
+						border-left: 14px solid transparent
+						border-right: 14px solid transparent
+						border-top: 6px solid #b96e2b
+						position: absolute
+						top: 100%
+						left: 50%
+						transform: translateX(-50%)
+						
