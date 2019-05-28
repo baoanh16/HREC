@@ -24,6 +24,8 @@ $(document).ready(function () {
 	FormRegisterCaptcha();
 	FixedHeightProjectItem();
 	FaqItemToggle();
+	MemberSlider();
+	ProjectMemberSlider();
 	// News scripts
 	SetHeightNewsItem();
 });
@@ -383,5 +385,53 @@ function FaqItemToggle() {
 		$(this).parent().children('.info').slideToggle()
 		$(this).parent().siblings('.faq-item').removeClass('active')
 		$(this).parent().siblings('.faq-item').children('.info').slideUp()
+	})
+}
+function MemberSlider() {
+	var MemberSlider = new Swiper('.member-1 .swiper-container', {
+		slidesPerView: 1,
+		spaceBetween: 20,
+		speed: 1400,
+		loop: true,
+		autoplay: {
+			delay: 4000,
+			disableOnInteraction: false,
+		},
+		navigation: {
+			nextEl: '.member-1 .swiper-next'
+		},
+		pagination: {
+			el: '.big-member .swiper-pagination',
+			clickable: true,
+		}
+	})
+}
+function ProjectMemberSlider() {
+	var MemberSlider = new Swiper('.project-detail .swiper-container', {
+		slidesPerView: 3,
+		spaceBetween: 20,
+		speed: 1400,
+		loop: true,
+		autoplay: {
+			delay: 4000,
+			disableOnInteraction: false,
+		},
+		navigation: {
+			nextEl: '.project-detail .swiper-next',
+			prevEl: '.project-detail .swiper-prev',
+		},
+		on :{
+			init: function(){
+				FixedHeightProjectItem();
+			}
+		},
+		breakpoints: {
+			1025: {
+				slidesPerView: 2
+			},
+			768: {
+				slidesPerView: 1
+			}
+		}
 	})
 }

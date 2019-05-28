@@ -6,15 +6,25 @@
 		align-items: center
 		padding-left: 20px
 		cursor: pointer
+		padding-top: 10px
+		padding-bottom: 10px
+		padding-right: 60px
+		position: relative
+		min-height: 50px
 		.mdi
 			flex: 0 0 50px
 			max-width: 50px
 			height: 50px
+			width: 50px
 			font-size: 18px
 			color: #999999
 			display: flex
 			justify-content: center
 			align-items: center
+			position: absolute
+			right: 0
+			top: 50%
+			transform: translateY(-50%)
 		h3
 			flex-basis: 0
 			flex-grow: 1
@@ -24,7 +34,7 @@
 	&.active
 		.title
 			.mdi
-				transform: rotateX(180deg)
+				transform: rotateX(180deg) translateY(50%)
 	&.active, &:hover
 		.title
 			h3

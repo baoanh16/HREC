@@ -1,0 +1,209 @@
+.member-1
+	.big-member
+		.swiper-pagination
+			.swiper-pagination-bullet
+				width: 8px
+				height: 8px
+				opacity: 1
+				background: white
+				border-radius: 0
+			.swiper-pagination-bullet-active
+				background: #b96e2b
+		.swiper-next
+			position: absolute
+			left: 570px
+			top: 50%
+			transform: translate(-50%, -50%)
+			width: 35px
+			height: 35px
+			z-index: 10
+		.swiper-slide
+			position: relative
+			.imgbox
+				height: 500px
+				overflow: hidden
+				img
+					height: 100%
+					width: 100%
+					object-fit: cover
+				@media (max-width: 767.98px)
+					display: none
+			.content
+				position: absolute
+				padding: 40px
+				background-color: rgba(white,.85)
+				top: 50%
+				transform: translateY(-50%)
+				left: 0
+				width: 100%
+				max-width: 570px
+				@media (max-width: 767.98px)
+					position: static
+					max-width: none
+					padding: 10px
+					transform: none
+					background-color: rgba(#b96e2b,.25)
+			.img-top
+				display: flex
+				margin-bottom: 20px
+				@media (max-width: 767.98px)
+					justify-content: center
+				>div
+					margin: 0 5px
+					max-height: 60px
+					@media (max-width: 767.98px)
+						height: 40px
+					img
+						height: 100%
+			.title
+				margin-bottom: 20px
+				h4
+					font-size: 18px
+					text-transform: uppercase
+					font-weight: 500
+					@media (max-width: 1024.98px)
+						font-size: 17px
+					@media (max-width: 767.98px)
+						font-size: 16px
+			.info
+				display: flex
+				@media (max-width: 767.98px)
+					flex-wrap: wrap
+					text-align: center
+			.img
+				flex: 0 0 140px
+				max-width: 140px
+				img
+					border: 2px solid #b96e2b
+				@media (max-width: 767.98px)
+					flex: 0 0 100%
+					max-width: 100%
+					margin-bottom: 15px
+			.description
+				flex-basis: 0
+				flex-grow: 1
+				max-width: 100%
+				padding-left: 20px
+				@media (max-width: 767.98px)
+					flex: 0 0 100%
+					max-width: 100%
+					padding-left: 0
+			.contact-info
+				display: flex
+				font-size: 14px
+				margin-bottom: 7px
+				.mdi
+					flex: 0 0 25px
+					max-width: 25px
+					color: #b86d33
+				a
+					color: #b86d33
+					text-decoration: underline
+		.btn-wrapper
+			@media (min-width: 768px)
+				text-align: right
+			a
+				color: #a2885e
+				font-size: 15px
+				.mdi
+					margin-left: 7px
+.member-item
+	margin-top: 20px
+	.imgbox
+		height: 165px
+		width: 100%
+		display: flex
+		justify-content: center
+		align-items: center
+		border: 1px solid #e1e1e1
+		padding: 20px
+	.info
+		background: #f5f5f5
+		padding: 15px
+		font-size: 14px
+		h3
+			font-weight: 500
+.member-popup
+	@media (min-width: 1025px)
+		overflow: visible
+	@media (max-width: 1024.98px)
+		padding-left: 10px
+		padding-right: 10px
+	.title
+		margin-bottom: 15px
+		h4
+			font-size: 18px
+			text-transform: uppercase
+			font-weight: 500
+			@media (max-width: 1024.98px)
+				font-size: 17px
+			@media (max-width: 767.98px)
+				font-size: 16px
+	.logo
+		margin-bottom: 15px
+		img
+			max-height: 60px
+			+ img
+				margin-left: 25px
+	.info
+		display: flex
+		@media (max-width: 1024.98px)
+			margin-bottom: 20px
+		@media (max-width: 767.98px)
+			flex-wrap: wrap
+			text-align: center
+	.img
+		flex: 0 0 140px
+		max-width: 140px
+		img
+			border: 2px solid #b96e2b
+		@media (max-width: 767.98px)
+			flex: 0 0 100%
+			max-width: 100%
+			margin-bottom: 15px
+	.description
+		flex-basis: 0
+		flex-grow: 1
+		max-width: 100%
+		padding-left: 20px
+		p
+			strong
+				font-weight: 500
+		@media (max-width: 767.98px)
+			flex: 0 0 100%
+			max-width: 100%
+			padding-left: 0
+	.contact-info
+		display: flex
+		font-size: 14px
+		margin-bottom: 7px
+		.mdi
+			flex: 0 0 25px
+			max-width: 25px
+			color: #b86d33
+		a
+			color: #b86d33
+			text-decoration: underline
+	.full-content
+		font-size: 15px
+		p
+			margin-bottom: 10px
+			strong
+				font-weight: 500
+	.fancybox-button
+		@media (min-width: 1025px)
+			width: 30px
+			height: 30px
+			border-radius: 50%
+			border: 1px solid #999999
+			background: white
+			transform: translate(50%,-50%)
+			opacity: 1
+			display: flex
+			justify-content: center
+			align-items: center
+			padding: 0
+			svg
+				width: 24px
+				height: 24px
+				color: #999999
