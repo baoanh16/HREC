@@ -5,7 +5,7 @@
 	<xsl:output method="html" indent="yes"/>
 	<xsl:template match="/">
 		<xsl:apply-templates select="/ZoneList/Zone">
-			<xsl:with-param select="/NewsList/ModuleTitle" name="BlockBanner"></xsl:with-param>
+			<xsl:with-param select="/ZoneList/ModuleTitle" name="BlockBanner"></xsl:with-param>
 		</xsl:apply-templates>
 	</xsl:template>
 	<xsl:template match="Zone">

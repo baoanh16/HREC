@@ -3,11 +3,9 @@
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 	xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
 	<xsl:output method="html" indent="yes"/>
-
 	<xsl:template match="/">
 		<xsl:apply-templates select="/BannerList/Banner"></xsl:apply-templates>
 	</xsl:template>
-	
 	<xsl:template match="Banner">
 		<a>
 			<xsl:attribute name="href">

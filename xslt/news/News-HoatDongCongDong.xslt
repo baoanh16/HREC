@@ -5,6 +5,8 @@
 	<xsl:output method="html" indent="yes"/>
 	<xsl:template match="/">
 		<div class="container">
+			<h2 class="page-title">
+			<xsl:value-of disable-output-escaping="yes" select="/NewsList/ZoneTitle"></xsl:value-of></h2>
 			<div class="news-list clearfix">
 				<xsl:apply-templates select="/NewsList/News"></xsl:apply-templates>
 			</div>

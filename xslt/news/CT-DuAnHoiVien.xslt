@@ -82,7 +82,9 @@
 				<xsl:if test="position()=5">
 					<span class="mdi mdi-crop"></span>
 				</xsl:if>
-				<xsl:if test="position()=6"></xsl:if>
+				<xsl:if test="position()=6">
+					<span class="lnr lnr-chart-bars"></span>
+					</xsl:if>
 				<xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
 			</td>
 			<td>

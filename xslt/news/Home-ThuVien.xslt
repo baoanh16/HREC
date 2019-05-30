@@ -82,7 +82,7 @@
 							</img>
 						</div>
 						<div class="info">
-							<a href="./img/news/1.jpg" data-fancybox="gallery_1">
+							<a>
 								<xsl:attribute name="href">
 									<xsl:value-of select="ImageUrl"></xsl:value-of>
 								</xsl:attribute>
@@ -98,7 +98,7 @@
 									<xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
 								</h3>
 							</a>
-							<a>
+							<!-- <a>
 								<xsl:attribute name="href">
 									<xsl:value-of select="ImageUrl"></xsl:value-of>
 								</xsl:attribute>
@@ -109,7 +109,7 @@
 									<xsl:text disable-output-escaping="yes">gallery_</xsl:text>
 									<xsl:value-of disable-output-escaping="yes" select="position()"></xsl:value-of>
 								</xsl:attribute>
-							</a>
+							</a> -->
 						</div>
 						<div class="d-none">
 							<xsl:apply-templates select="NewsImages">
@@ -123,15 +123,18 @@
 	</xsl:template>
 	<xsl:template match="NewsImages">
 		<xsl:param name="Position"></xsl:param>
+		<xsl:if test="position()&gt;2">
+			
 		<a>
 			<xsl:attribute name="href">
 				<xsl:value-of select="ImageUrl"></xsl:value-of>
 			</xsl:attribute>
 			<xsl:attribute name="data-fancybox">
 				<xsl:text disable-output-escaping="yes">gallery_</xsl:text>
-				<xsl:value-of disable-output-escaping="yes" select="Position"></xsl:value-of>
+				<xsl:value-of disable-output-escaping="yes" select="$Position"></xsl:value-of>
 			</xsl:attribute>
 		</a>
+		</xsl:if>
 	</xsl:template>
 	<xsl:template match="News" mode="Video">
 		<xsl:if test="position()&lt;5">
@@ -167,7 +170,7 @@
 								<xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
 							</h3>
 						</a>
-						<a>
+						<!-- <a>
 							<xsl:attribute name="href">
 								<xsl:value-of select="BriefContent"></xsl:value-of>
 							</xsl:attribute>
@@ -178,7 +181,7 @@
 								<xsl:text disable-output-escaping="yes">gallery_video_</xsl:text>
 								<xsl:value-of disable-output-escaping="yes" select="position()"></xsl:value-of>
 							</xsl:attribute>
-						</a>
+						</a> -->
 					</div>
 				</article>
 			</div>

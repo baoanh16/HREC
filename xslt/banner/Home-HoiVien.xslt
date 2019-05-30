@@ -13,6 +13,12 @@
 					<xsl:apply-templates select="/BannerList/Banner"></xsl:apply-templates>
 				</div>
 			</div>
+			<xsl:if test="count(/BannerList/Banner) &gt;0">
+				<div class="swiper-nav">
+					<div class="swiper-prev"><img src="/Data/Sites/1/skins/default/img/slider-prev-2.png" /></div>
+					<div class="swiper-next"><img src="/Data/Sites/1/skins/default/img/slider-next-2.png" /></div>
+				</div>
+			</xsl:if>
 		</div>
 	</xsl:template>
 	<xsl:template match="Banner">

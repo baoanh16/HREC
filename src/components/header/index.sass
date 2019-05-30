@@ -1,6 +1,6 @@
 header
 	position: fixed
-	z-index: 100
+	z-index: 105
 	top: 0
 	left: 0
 	width: 100%
@@ -68,10 +68,13 @@ header
 			display: flex
 			align-items: center
 			height: 50px
+			font-size: 15px
+			@media (max-width: 1359.98px)
+				font-size: 13px
 			li
 				position: relative
-				padding-right: 10px
-				margin-right: 10px
+				padding-right: 8px
+				margin-right: 8px
 				a
 					color: white
 					text-transform: uppercase
@@ -88,7 +91,7 @@ header
 					&.active,&:hover
 						&:before
 							position: absolute
-							bottom: -15px
+							bottom: -17px
 							transform: translateY(-50%)
 							content: ''
 							height: 5px

@@ -51,7 +51,7 @@ Facebook: https://fb.com/canhcam.vn
 	script(src='//oss.maxcdn.com/respond/1.4.2/respond.min.js')
 	-->
 	<link rel="stylesheet"
-		href="https://fonts.googleapis.com/css?family=Barlow:300,400,500,700&amp;display=swap&amp;subset=vietnamese">
+		href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=fallback&subset=vietnamese">
 	<style>
 		.fancybox-type-iframe {
 			min-height: 560px;
@@ -195,7 +195,7 @@ Facebook: https://fb.com/canhcam.vn
 				<div class="container bottom-footer">
 					<div class="row no-gutters">
 						<div class="copyright col-lg-auto">
-							<p>© 2019 HREC. Tất cả các quyền được bảo hộ. Thiết kế bởi <a href="https://www.canhcam.vn">Cánh Cam</a></p>
+							<p style="display: flex">© 2019 HREC. Tất cả các quyền được bảo hộ. <span style="font-size: 0; opacity: 0; line-height: 0; visibility: hidden">Thiết kế bởi <a href="https://www.canhcam.vn">Cánh Cam</a></span></p>
 						</div>
 						<portal:modulewrapper id="mdl141" runat="server" configuremoduleid="141" />
 					</div>

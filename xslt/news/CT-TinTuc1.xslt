@@ -15,11 +15,7 @@
 							<xsl:value-of disable-output-escaping="yes" select="/NewsDetail/Title"></xsl:value-of>
 							<xsl:value-of select="/NewsDetail/EditLink" disable-output-escaping="yes"></xsl:value-of>
 						</h1>
-						<!-- <div class="brief-content">
-							<p>
-								<xsl:value-of disable-output-escaping="yes" select="/NewsDetail/BriefContent"></xsl:value-of>
-							</p>
-						</div> -->
+						<!-- <div class="brief-content"><p><xsl:value-of disable-output-escaping="yes" select="/NewsDetail/BriefContent"></xsl:value-of></p></div> -->
 						<div class="full-content">
 							<xsl:value-of disable-output-escaping="yes" select="/NewsDetail/FullContent"></xsl:value-of>
 						</div>
@@ -35,16 +31,42 @@
 									<xsl:value-of disable-output-escaping="yes" select="/NewsDetail/FullUrl"></xsl:value-of>
 								</xsl:attribute>
 								Tweet
+
 							
 							</a>
 						</div>
 					</div>
 					<div class="col-lg-4">
-						<h2 class="main-title">Sự kiện khác</h2>
-						<xsl:apply-templates select="/NewsDetail/NewsOther"></xsl:apply-templates>
+						<div class="news-other" style="margin-bottom: 30px">
+							<h2 class="main-title">Sự kiện khác</h2>
+							<xsl:apply-templates select="/NewsDetail/NewsOther"></xsl:apply-templates>
+						</div>
+						<div class="banner-list">
+							<xsl:apply-templates select="/NewsDetail/Banner"></xsl:apply-templates>
+						</div>
 					</div>
 				</div>
 			</div>
+		</div>
+	</xsl:template>
+	<xsl:template match="Banner">
+		<div class="banner-item">
+		<a>
+		<xsl:attribute name="href">
+			<xsl:value-of select="Url"></xsl:value-of>
+		</xsl:attribute>
+		<xsl:attribute name="title">
+			<xsl:value-of select="Title"></xsl:value-of>
+		</xsl:attribute>
+		<img class="lazyload" style="width: 100%">
+			<xsl:attribute name="data-src">
+				<xsl:value-of select="ImageUrl"></xsl:value-of>
+			</xsl:attribute>
+			<xsl:attribute name="alt">
+				<xsl:value-of select="Title"></xsl:value-of>
+			</xsl:attribute>
+		</img>
+		</a>
 		</div>
 	</xsl:template>
 	<xsl:template match="NewsOther">

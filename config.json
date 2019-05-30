@@ -21,6 +21,7 @@
 		"_plugins/font.css",
 		"bower_components/swiper/dist/css/swiper.min.css",
 		"bower_components/fancybox/dist/jquery.fancybox.min.css",
-		"bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.standalone.min.css"
+		"bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.standalone.min.css",
+		"_plugins/sitemap.css"
 	]
 }

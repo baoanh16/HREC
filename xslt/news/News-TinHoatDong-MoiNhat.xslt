@@ -23,12 +23,9 @@
 			<div class="news-2-item">
 				<article>
 					<div class="imgbox">
-						<a>
+						<a href="news-detail.html" data-bg="./img/news/1.jpg">
 							<xsl:attribute name="data-bg">
-								<xsl:value-of disable-output-escaping="yes" select="ImageUrl"></xsl:value-of>
-							</xsl:attribute>
-							<xsl:attribute name="href">
-								<xsl:value-of disable-output-escaping="yes" select="Url"></xsl:value-of>
+								<xsl:value-of select="ImageUrl"></xsl:value-of>
 							</xsl:attribute>
 							<img class="lazyload">
 								<xsl:attribute name="data-src">
@@ -97,12 +94,9 @@
 			<div class="news-2-item">
 				<article>
 					<div class="imgbox">
-						<a>
+						<a href="news-detail.html" data-bg="./img/news/1.jpg">
 							<xsl:attribute name="data-bg">
-								<xsl:value-of disable-output-escaping="yes" select="ImageUrl"></xsl:value-of>
-							</xsl:attribute>
-							<xsl:attribute name="href">
-								<xsl:value-of disable-output-escaping="yes" select="Url"></xsl:value-of>
+								<xsl:value-of select="ImageUrl"></xsl:value-of>
 							</xsl:attribute>
 							<img class="lazyload">
 								<xsl:attribute name="data-src">

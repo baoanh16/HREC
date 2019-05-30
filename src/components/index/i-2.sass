@@ -20,6 +20,16 @@
 				font-size: 22px
 	.description
 		font-size: 16px
+		@media (min-width: 1025px)
+			position: relative
+			&:before
+				position: absolute
+				left: -35px
+				width: 1px
+				height: 100%
+				background: #cccccc
+				top: 0
+				content: ''
 	@media (max-width: 1024.98px)
 		.col-lg-8,.col-lg-4
 			position: static

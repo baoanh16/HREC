@@ -28,6 +28,11 @@ $(document).ready(function () {
 	ProjectMemberSlider();
 	// News scripts
 	SetHeightNewsItem();
+
+	$('.btn-apply').on('click', function () {
+		$('.form-apply').slideToggle();
+	})
+	$('.AspNet-TreeView-Collapse').trigger('click');
 });
 
 $(window).on('resize', function () {
@@ -208,13 +213,8 @@ function SetupFancybox() {
 	$('[data-fancybox]').fancybox({
 		thumbs: {
 			autoStart: true, // Display thumbnails on opening
-			hideOnClose: true, // Hide thumbnail grid when closing animation starts
 			axis: "x" // Vertical (y) or horizontal (x) scrolling
-		},
-		slideShow: {
-			autoStart: true,
-			speed: 3000
-		},
+		}
 	})
 }
 
@@ -420,8 +420,8 @@ function ProjectMemberSlider() {
 			nextEl: '.project-detail .swiper-next',
 			prevEl: '.project-detail .swiper-prev',
 		},
-		on :{
-			init: function(){
+		on: {
+			init: function () {
 				FixedHeightProjectItem();
 			}
 		},

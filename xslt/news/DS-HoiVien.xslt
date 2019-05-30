@@ -4,25 +4,23 @@
 	xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
 	<xsl:output method="html" indent="yes"/>
 	<xsl:template match="/">
-		<div class="container">
-			<div class="row">
-				<div class="col-12">
-					<div class="swiper-container big-member" data-bg="/Data/Sites/1/skins/default/img/member/2.jpg">
-						<div class="swiper-nav">
-							<div class="swiper-next">
-								<img src="/Data/Sites/1/skins/default/img/slider-next-3.png" alt="" />
-							</div>
+		<div class="row">
+			<div class="col-12">
+				<div class="swiper-container big-member" data-bg="/Data/Sites/1/skins/default/img/member/2.jpg">
+					<div class="swiper-nav">
+						<div class="swiper-next">
+							<img src="/Data/Sites/1/skins/default/img/slider-next-3.png" alt="" />
 						</div>
-						<div class="swiper-wrapper">
-							<xsl:apply-templates select="/NewsList/News" mode="Slide"></xsl:apply-templates>
-						</div>
-						<div class="swiper-pagination"></div>
 					</div>
+					<div class="swiper-wrapper">
+						<xsl:apply-templates select="/NewsList/News" mode="Slide"></xsl:apply-templates>
+					</div>
+					<div class="swiper-pagination"></div>
 				</div>
 			</div>
-			<div class="row">
-				<xsl:apply-templates select="/NewsList/News" mode="Normal"></xsl:apply-templates>
-			</div>
+		</div>
+		<div class="row">
+			<xsl:apply-templates select="/NewsList/News" mode="Normal"></xsl:apply-templates>
 		</div>
 	</xsl:template>
 	<xsl:template match="News" mode="Slide">
@@ -72,8 +70,7 @@
 							</p>
 							<hr/>
 							<div class="attributes">
-								<xsl:apply-templates select="/NewsList/NewsAttributes"></xsl:apply-templates>
-								<!-- <div class="contact-info"><span class="mdi mdi-map-marker"></span><p><strong>Chức vụ: </strong><span>Tổng giám đốc</span></p></div><div class="contact-info"><span class="mdi mdi-phone-in-talk"></span><p><strong>Chức vụ: </strong><span>Tổng giám đốc</span></p></div><div class="contact-info"><span class="mdi mdi-email"></span><p><strong>Chức vụ: </strong><span>Tổng giám đốc</span></p></div><div class="contact-info"><span class="mdi mdi-web"></span><p><strong>Chức vụ: </strong><a href="#">asd asda dasd as</a></p></div> -->
+								<xsl:apply-templates select="NewsAttributes"></xsl:apply-templates>
 							</div>
 							<div class="btn-wrapper">
 								<a href="javascript:void(0)">
@@ -136,34 +133,7 @@
 											</p>
 											<hr/>
 											<div class="attributes">
-												<div class="contact-info">
-													<span class="mdi mdi-map-marker"></span>
-													<p>
-														<strong>Chức vụ: </strong>
-														<span>Tổng giám đốc</span>
-													</p>
-												</div>
-												<div class="contact-info">
-													<span class="mdi mdi-phone-in-talk"></span>
-													<p>
-														<strong>Chức vụ: </strong>
-														<span>Tổng giám đốc</span>
-													</p>
-												</div>
-												<div class="contact-info">
-													<span class="mdi mdi-email"></span>
-													<p>
-														<strong>Chức vụ: </strong>
-														<span>Tổng giám đốc</span>
-													</p>
-												</div>
-												<div class="contact-info">
-													<span class="mdi mdi-web"></span>
-													<p>
-														<strong>Chức vụ: </strong>
-														<a href="#">asd asda dasd as</a>
-													</p>
-												</div>
+												<xsl:apply-templates select="NewsAttributes"></xsl:apply-templates>
 											</div>
 										</div>
 									</div>
@@ -185,15 +155,7 @@
 			<div class="col-sm-6 col-lg-3">
 				<div class="member-item">
 					<div class="imgbox">
-						<a href="javascript:void(0)">
-							<xsl:attribute name="data-fancybox">
-								<xsl:text disable-output-escaping="yes">member_</xsl:text>
-								<xsl:value-of disable-output-escaping="yes" select="position()"></xsl:value-of>
-							</xsl:attribute>
-							<xsl:attribute name="data-src">
-								<xsl:text disable-output-escaping="yes">#member_</xsl:text>
-								<xsl:value-of disable-output-escaping="yes" select="position()"></xsl:value-of>
-							</xsl:attribute>
+						<a href="javascript:void(0)" class="member-normal">
 							<img class="lazyload">
 								<xsl:attribute name="data-src">
 									<xsl:value-of select="ImageUrl"></xsl:value-of>
@@ -202,6 +164,17 @@
 									<xsl:value-of select="Title"></xsl:value-of>
 								</xsl:attribute>
 							</img>
+						</a>
+						<a href="javascript:void(0)" class="thumb-popup">
+							<xsl:attribute name="data-fancybox">
+								<xsl:text disable-output-escaping="yes">member_</xsl:text>
+								<xsl:value-of disable-output-escaping="yes" select="position()"></xsl:value-of>
+							</xsl:attribute>
+							<xsl:attribute name="data-src">
+								<xsl:text disable-output-escaping="yes">#member_</xsl:text>
+								<xsl:value-of disable-output-escaping="yes" select="position()"></xsl:value-of>
+							</xsl:attribute>
+							<xsl:apply-templates select="NewsImages" mode="Thumbs"></xsl:apply-templates>
 						</a>
 					</div>
 					<div class="info">
@@ -268,34 +241,7 @@
 											</p>
 											<hr/>
 											<div class="attributes">
-												<div class="contact-info">
-													<span class="mdi mdi-map-marker"></span>
-													<p>
-														<strong>Chức vụ: </strong>
-														<span>Tổng giám đốc</span>
-													</p>
-												</div>
-												<div class="contact-info">
-													<span class="mdi mdi-phone-in-talk"></span>
-													<p>
-														<strong>Chức vụ: </strong>
-														<span>Tổng giám đốc</span>
-													</p>
-												</div>
-												<div class="contact-info">
-													<span class="mdi mdi-email"></span>
-													<p>
-														<strong>Chức vụ: </strong>
-														<span>Tổng giám đốc</span>
-													</p>
-												</div>
-												<div class="contact-info">
-													<span class="mdi mdi-web"></span>
-													<p>
-														<strong>Chức vụ: </strong>
-														<a href="#">asd asda dasd as</a>
-													</p>
-												</div>
+												<xsl:apply-templates select="NewsAttributes"></xsl:apply-templates>
 											</div>
 										</div>
 									</div>
@@ -323,5 +269,45 @@
 				</xsl:attribute>
 			</img>
 		</xsl:if>
+	</xsl:template>
+	<xsl:template match="NewsImages" mode="Thumbs">
+		<xsl:if test="position()&gt;1">
+			<xsl:attribute name="data-bg">
+				<xsl:value-of select="ThumbnailUrl"></xsl:value-of>
+			</xsl:attribute>
+			<img class="lazyload member-thumb">
+				<xsl:attribute name="data-src">
+					<xsl:value-of select="ThumbnailUrl"></xsl:value-of>
+				</xsl:attribute>
+				<xsl:attribute name="alt">
+					<xsl:value-of select="Title"></xsl:value-of>
+				</xsl:attribute>
+			</img>
+		</xsl:if>
+	</xsl:template>
+	<xsl:template match="NewsAttributes">
+		<div class="contact-info">
+			<xsl:if test="position()=1">
+				<span class="mdi mdi-map-marker"></span>
+			</xsl:if>
+			<xsl:if test="position()=2">
+				<span class="mdi mdi-phone-in-talk"></span>
+			</xsl:if>
+			<xsl:if test="position()=3">
+				<span class="mdi mdi-email"></span>
+			</xsl:if>
+			<xsl:if test="position()=4">
+				<span class="mdi mdi-web"></span>
+			</xsl:if>
+			<p>
+				<strong>
+					<xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
+				</strong>
+				<xsl:text disable-output-escaping="yes">: </xsl:text>
+				<span>
+					<xsl:value-of disable-output-escaping="yes" select="Content"></xsl:value-of>
+				</span>
+			</p>
+		</div>
 	</xsl:template>
 </xsl:stylesheet>
